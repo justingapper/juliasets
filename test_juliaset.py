@@ -62,9 +62,11 @@ class TestRandomC:
         print "_d = ", self.j._d
         assert self.j._d == 0.1
         print "Test that complex plane is regenerated"
-        print "len(_complexplane) = ", len(self.j._complexplane)
+        print "len(_complexplane) = ", self.j._complexplane.size
+        #print "len(_complexplane) = ", len(self.j._complexplane)
         print "int(4.0 / 0.1)**2 = ", int(4.0 / 0.1)**2
-        assert len(self.j._complexplane) == int(4.0 / 0.1)**2
+        assert self.j._complexplane.size == int(4.0 / 0.1)**2
+        #assert len(self.j._complexplane) == int(4.0 / 0.1)**2
     
     def test_generate(self):
         """Test that generating the julia set works"""
